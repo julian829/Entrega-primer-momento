@@ -23,8 +23,8 @@ def ver_eventos():
         print("No hay eventos registrados")
     else:
         print("\nEventos registrados:")
-        for evento in eventos:
-            print(f"Nombre: {evento['nombre']} - Fecha: {evento['fecha']}")
+        for i, evento in enumerate(eventos, start=1):
+            print(f"{i}. Nombre: {evento['nombre']} - Fecha: {evento['fecha']}")
 
 def main():
     while True:
