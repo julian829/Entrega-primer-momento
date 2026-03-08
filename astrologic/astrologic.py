@@ -18,9 +18,27 @@ def registrar_evento():
     eventos.append(evento)
     print("Evento registrado correctamente")
 
+def ver_eventos():
+    if len(eventos) == 0:
+        print("No hay eventos registrados")
+    else:
+        print("\nEventos registrados:")
+        for evento in eventos:
+            print(f"Nombre: {evento['nombre']} - Fecha: {evento['fecha']}")
+
 def main():
-    print("Astrologic")
-    print("Entrega Python 1")
-    menu()
+    while True:
+        menu()
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            registrar_evento()
+        elif opcion == "2":
+            ver_eventos()
+        elif opcion == "3":
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción inválida")
 
 main()
